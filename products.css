@@ -1,0 +1,278 @@
+/* [GENERAL] */
+
+html, body{
+    font-family: 'Lora', serif;
+    background: #ffffff;
+    height: 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* [HEADER] */
+header{
+    position: absolute;
+    background-color: #FFBFBF;
+    width: 100vw;
+    color: #A97C7C;
+    height: 10vh;
+}
+
+header h2{
+    position: absolute;
+    margin-top: 8px;
+    left: 105px;
+    font-size: 50px;
+}
+
+/* INTERMEZZO MASUK LOGO */
+/* untuk ngilangin underline a sama warna biru-nya */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+header h2 a {
+    color:black;
+}
+
+#second-color{
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    font-weight: bold;
+}
+/* INTERMEZZO LOGO END*/
+
+/* [DROPDOWN MENU STARTS] */
+ul#menu {
+    right: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    padding-right: 20px;
+}
+
+li#dropdown {
+    position: relative;
+    padding: 0 20px;
+    margin: 0;
+    top: 15px;
+    list-style: none;
+    color: #980000;
+}
+
+#dropdown-menu {
+    position: absolute;
+    height: 100vh;
+    left:0px;
+    top: 61px;
+    background-color: #FFE8E8;
+    transform: scaleY(0);
+    transition: transform 300ms;
+    transform-origin: top;
+}
+
+/* Hover for dropdown menu */
+a#menudrop:hover {
+    color: #EB6262;
+    transition: 150ms;
+}
+#dropdown:hover #dropdown-menu {
+    transform: scaleY(1);
+}
+
+.dropdown-items {
+    padding: 15px 10px;
+}
+
+/* Hover for the dropdown items */
+.dropdown-items:hover {
+    background-color: #FFC1C1;
+    font-weight: bold;
+    color: #353535;
+    transition: 500ms;
+}
+
+#dropdown{
+    background: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+/* [HEADER DONE] */
+
+
+
+/* [PRODUCTS] */
+.products {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+ul#listing {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+ul#listing ul {
+    list-style: none;
+}
+
+#listing li a {
+    color: black;
+}
+
+#listing div {
+    margin: 30px;
+    text-align: center;
+}
+
+.products div {
+    font-size: 30px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background:#FFF8E9;
+    padding: 40px 100px 40px 100px;
+    border-radius: 20px;
+}
+
+.products div:hover {
+    background: #ad9d7c;
+    color: white;
+    transition: 300ms;
+}
+/* [PRODUCTS DONE]*/
+
+/* [FOOTER] */
+
+.footer {
+    bottom: 0px;
+    margin-top: auto;
+    background-color: #FFE8E8;
+    color: #FF7474;
+    height: 325px;
+    width: 100vw;
+    position: sticky;
+    top: 100%;
+}
+
+.footer .footer-content {
+    border: 1px solid rgb(255, 255, 255);
+    height: 292px;
+    display: flex;
+}
+
+.footer-content h1 {
+    font-size: 50px;
+}
+.footer-content p {
+    padding-top: 30px;
+}
+
+.footer .footer-content .socials {
+    position: relative;
+    left: -18px;
+}
+
+.footer .footer-content .socials li {
+    color: #FF7474;
+}
+
+.footer .footer-content .socials a {
+    text-decoration: none;
+    color: #FF7474;
+}
+
+.footer .footer-content .socials a:hover {
+    color: #521616;
+}
+
+.footer .footer-content .footer-section {
+    flex: 1;
+    padding: 25px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.footer-section-contacts p {
+    font-weight: bold;
+}
+
+.footer .footer-bottom {
+    background-color: #FFBFBF;
+    color: #A97C7C;
+    height: 25px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-top:5px;
+}
+/* [FOOTER END] */
+
+
+
+/* [RESPONSIVES] */
+/* RESPONSIVENESS for PRODUCTS */
+@media (max-width: 737px) {
+    ul#listing {
+        flex-direction: column;
+    }
+} 
+
+@media (max-width: 399px) {
+    ul#listing {
+        flex-direction: column;
+    }
+    #listing div {
+        margin: 10px;
+    }
+    .products {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 100px;
+        padding-bottom: 0px;
+    }
+    .products div {
+        font-size: 15px;
+        padding: 20px 60px 20px 60px;
+        border-radius: 5px;
+    }
+}
+
+
+/* RESPONSIVENESS for FOOTER */
+@media (max-width: 800px) {
+  .footer {
+    font-size: smaller;
+  }
+}
+
+@media (max-width: 499px) {
+    .footer {
+        height: 280px;
+        font-size: x-small;
+    }
+    .footer .footer-content {
+        height: 247px;
+    }
+}
+
+@media (max-width: 373px) {
+    .footer {
+        height: 250px;
+        font-size: xx-small;
+    }
+    .footer .footer-content {
+        height: 217px;
+    }
+}

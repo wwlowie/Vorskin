@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loginstyle.css">
+    <title>Log In | VOrskins</title>
+</head>
+<body>
+    <div class="popup">
+        <div class="decoration-img">
+            <img src="./assets/gradien_green_yellow.jpg">
+        </div>
+        <form action="get" method="get">
+            <div class="loginform">
+                <h1>WELCOME, <br>
+                    Dear Guest!</h1>
+                <div class="formcontent">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" placeholder="Enter Your Email (@sunib.com)">
+                </div>
+                <div class="formcontent">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Enter Your Password">
+                </div>
+                <div class="formcontent">
+                    <ul>
+                        <li> <a href="forgotpass.html">Forgot Password</a>
+                        </li>
+                        <li> <a href="needhelp.html">Need Help?</a></li>
+                    </ul>
+                </div>
+                <div class="formcontent">
+                    <button type="button" onclick="validateForm()">
+                        Log In
+                    </button>
+                </div>
+            </div>
+        </form>
+        <script src="loginscript.js"></script>
+    </div>
+</body>
+</html>
